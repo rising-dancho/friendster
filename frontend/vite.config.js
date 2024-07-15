@@ -14,14 +14,4 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
-  server: {
-    port: 5174, // Development server port
-    proxy: {
-      '/api': {
-        target: env.VITE_API_BASE_URL, // Proxy API requests to backend server
-        changeOrigin: true, // Change the origin header to the target URL
-        rewrite: (path) => path.replace(/^\/api/, '/api'), // Rewrite the path
-      },
-    },
-  },
 });

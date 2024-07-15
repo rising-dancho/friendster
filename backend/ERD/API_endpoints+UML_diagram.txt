@@ -1,0 +1,53 @@
++--------------------------------------------------------------------------+
+|                             API Endpoints                                |
++---------+-------------------+--------------------------------------------+
+| Method  | Endpoint          | Description                                |
++---------+-------------------+--------------------------------------------+
+| USER                                                                     |
++---------+-------------------+--------------------------------------------+
+| GET     | /user             | Gets all user information documents        |
+| POST    | /user/login       | Login a user if exists                     |
+| POST    | /user/signup      | Create or sign-up a new user               |
+| GET     | /user/:id         | Gets a single user document                |
+| PATCH   | /user/:id         | Update the user information                |
+| DELETE  | /user/:id         | Delete the user account                    |
++---------+-------------------+--------------------------------------------+
+| PROFILE                                                                  |
++---------+-------------------+--------------------------------------------+
+| GET     | /profile          | Gets all profile information documents     |
+| POST    | /profile          | Create a new profile information document  |
+| GET     | /profile/:id      | Gets a single profile document             |
+| PATCH   | /profile/:id      | Updates a single profile                   |
+| DELETE  | /profile/:id      | Deletes all profile information            |
++---------+-------------------+--------------------------------------------+
+
+
++-------------------------------+
+| UML Diagram                   |
++-------------------------------+
+
++-------------------------------+
+|           User                |
++-------------------------------+
+        /           \
+       /             \
++------+             +------+
+| Manage User Information    |
++------+             +------+
+       \             /
+        \           /
++-------------------------------+
+|       System (API)            |
++-------------------------------+
+| - GET /user                   |
+| - POST /user/login            |
+| - POST /user/signup           |
+| - GET /user/:id               |
+| - PATCH /user/:id             |
+| - DELETE /user/:id            |
+| - GET /profile                |
+| - POST /profile               |
+| - GET /profile/:id            |
+| - PATCH /profile/:id          |
+| - DELETE /profile/:id         |
++-------------------------------+

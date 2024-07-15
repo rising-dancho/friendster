@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: arial, helvetica, sans-serif;
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.2em;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/homebg.gif)
+    repeat top left #ffffff;
+  padding-bottom: 30px !important;
+}
+
+.container,
+nav {
+  max-width: 850px;
+  background: #ffffff;
+  border: 1px solid #a6a69a;
+  padding: 20px;
+}
+
+.container {
+  margin: 0px auto 5px auto;
+  border-top: none;
+  display: grid;
+  grid-template-columns: 0.95fr 1.5fr;
+  grid-template-rows: 1fr 1.9fr 1fr 0.4fr 0.9fr 0.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'Login Register'
+    'Login Register'
+    'Find-Friends Register'
+    'Popular-Members Register'
+    'Popular-Members New-Members'
+    '. New-Members';
+}
+
+nav {
+  margin: 10px auto 0px auto;
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+nav .mainNav {
+  color: #fff;
+  padding-right: 16px;
+  font-size: 12px !important;
+  font-weight: bold;
+  padding: 2px 6px;
+  background: #3779ad
+    url(https://web.archive.org/web/20090322215102im_/http://images.friendster.com/images/navbar2_tile.gif)
+    repeat-x;
+  height: 20px;
+}
+
+.friendster-logo {
+  margin-bottom: 10px;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.right-nav-links:hover {
+  text-decoration: underline;
+}
+
+.mainNav,
+.topNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topNav a {
+  color: #086989;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mainNav ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.mainNav ul li {
+  padding: 0px 6px;
+}
+
+.mainNav ul li:first-child {
+  padding-left: 0px;
+}
+
+.mainNav ul li:last-child {
+  padding-right: 0px;
+}
+
+.mainNav ul li:hover {
+  height: 100%;
+  background-color: #4a93dd;
+}
+
+/* LVHA */
+.mainNav a:link,
+.mainNav a:visited {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.globnav_pipe {
+  font-size: 12px !important;
+  font-weight: bold;
+  margin: 0 1px;
+}
+
+.sub-heading {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 0;
+}
+
+.sub-heading--blue {
+  color: #284b77;
+}
+
+.sub-heading--white {
+  color: #fff;
+}
+
+.Login {
+  grid-area: Login;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/home/loginBox_bg.jpg)
+    no-repeat;
+}
+
+.Register {
+  grid-area: Register;
+  background: url('https://web.archive.org/web/20090322215714im_/http://images.friendster.com/images/home/RegForm_bg.png')
+    no-repeat;
+  padding: 5px 10px;
+}
+
+.Find-Friends {
+  grid-area: Find-Friends;
+}
+
+.Popular-Members {
+  grid-area: Popular-Members;
+}
+
+.New-Members {
+  grid-area: New-Members;
+}
+
+.inputs {
+  width: 150px !important;
+}
+
+.inputs-settings {
+  width: 100% !important;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: none;
+}
+
+input {
+  font-size: 12px;
+}
+
+input,
+select,
+fieldset,
+button {
+  margin-bottom: 6px;
+}
+
+input[type='radio'] {
+  margin-top: 3.5px;
+  vertical-align: bottom;
+}
+
+#answer-female,
+#answer-male {
+  margin-left: 8px;
+  margin-right: 3px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.login-container {
+  padding: 10px;
+  height: 100%;
+  font-weight: bold;
+}
+
+/* LVHA */
+.login-container a:link,
+.login-container a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-container a:hover,
+.login-container a:active {
+  text-decoration: underline;
+}
+
+.register-container {
+  font-weight: bold;
+}
+
+.genders-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+
+.genders-container > div {
+  display: flex;
+  gap: 7px;
+}
+
+.detail-gender {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.btn-normal {
+  align-self: flex-start;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 2.25rem;
+  padding-bottom: 1rem;
+}
+
+.margin-bottom-normal {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.65rem;
+}
+
+/* Button Styles */
+.greyButton {
+  padding: 4px 15px 4px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 19px;
+  height: 27px;
+  color: #555;
+  text-decoration: none;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+
+.greyButton:link,
+.greyButton:visited,
+.greyButton:hover,
+.greyButton:active {
+  color: #555;
+}
+
+.blueBigButton {
+  padding: 4px 19px 4px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+  background-color: #517db4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.redBigButton {
+  padding: 4px 19px 4px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 28px;
+  background-color: #ec6559;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* .redBigButton:hover {
+  background-color: #b6534a;
+} */
+
+/* GRID: PROFILE PAGE */
+.profile-gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'Person-Info Person-Info Person-Info Friends'
+    'Person-Info Person-Info Person-Info Friends'
+    'Person-Info Person-Info Person-Info Friends'
+    'Person-Info Person-Info Person-Info Friends'
+    'Gallery Gallery Gallery Groups'
+    'About About About Groups'
+    'Testimonials Testimonials Testimonials .';
+}
+
+.Person-Info,
+.Friends,
+.Gallery,
+.About,
+.Testimonials,
+.Groups {
+  height: fit-content;
+}
+.Person-Info {
+  grid-area: Person-Info;
+}
+
+.Friends {
+  grid-area: Friends;
+}
+
+.Groups {
+  grid-area: Groups;
+  height: fit-content;
+}
+
+.Gallery {
+  grid-area: Gallery;
+}
+
+.About {
+  grid-area: About;
+}
+
+.Testimonials {
+  grid-area: Testimonials;
+  margin-bottom: 20px;
+}
+
+.profile-header {
+  background-color: #e6f1f3;
+  color: #1b79ac;
+  padding: 5px 10px;
+}
+
+.profile-background {
+  background-color: #e3e3e3;
+  color: #575757;
+  padding: 6px 14px;
+  height: 90%; /* fix this later*/
+}
+
+.bio-container img {
+  height: 255px;
+  width: 220px;
+  object-fit: cover;
+  border: 2px solid #76b5c6;
+}
+
+.profile-background .bio-container figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red ; */
+}
+
+.profile-background .bio-container figcaption {
+  margin-top: 4px;
+}
+.profile-background .bio {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-background .bio-details {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-background .bio-container {
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-background .profile-button {
+  padding: 0 8px;
+  padding-top: 4px;
+  padding-bottom: 12px;
+  font-size: 11px;
+  background-color: #d1e6e9;
+  border: 2px solid #e5f0f2;
+  color: #1b79ac;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.profile-background .profile-button:hover {
+  background-color: #17728f;
+  color: white;
+  text-decoration: underline;
+}
+
+.profile-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 4px;
+}
+
+.profile-links {
+  text-decoration: none;
+  color: #17728f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-links:hover {
+  text-decoration: underline;
+}
+
+.friends-thumbnails {
+  width: fit-content;
+  height: fit-content;
+}
+
+.friends-thumbnails img {
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+  border: 0;
+}
+
+.friends-thumbnails figcaption {
+  width: 75px;
+  background-color: #e6f1f3;
+  color: #17728f;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
+
+.friendslist {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* border: 1px solid red; */
+  margin-bottom: 20px;
+}
+
+.friend-name {
+  color: #17728f;
+  text-decoration: none;
+}
+
+.friend-name:hover {
+  text-decoration: underline;
+}
+
+.img-thumbnail img {
+  height: 75px;
+  width: 75px;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+footer {
+  font-size: 10px;
+  line-height: 1em;
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  color: #666666;
+}
+
+/* LVHA */
+footer a:link,
+footer a:visited {
+  font-size: 10px;
+  color: #666666;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:active {
+  text-decoration: underline;
+}
+
+footer .bottom-links {
+  margin-top: 5px !important;
+}
+
+span.error {
+  padding: 1.5px;
+  background: #ffefef;
+  border: 1px solid #e7195a;
+  color: #e7195a;
+  margin: 2px 0px;
+  border-radius: 2px;
+}
+input.error {
+  border: 1px solid #e7195a;
+}
+
+/* FOR TESTING ONLY: LOGIN PAGE  */
+
+/* .container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.container *:after {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* FOR TESTING ONLY: PROFILE PAGE  */
+
+/* .profile-gridContainer * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.profile-gridContainer *:after {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+} */

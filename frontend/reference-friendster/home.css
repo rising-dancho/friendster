@@ -1,0 +1,2881 @@
+/* - - COMMON - - */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  font-family: Arial, sans-serif;
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.2em;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/homebg.gif)
+    repeat top left #ffffff;
+  z-index: 0;
+  padding-bottom: 30px !important;
+}
+
+input {
+  font-size: 12px;
+  color: #555555;
+}
+.photoUpload {
+  font-size: 13px;
+  color: #555555;
+}
+.photoPlaceholder {
+  font-size: 11px;
+  padding-left: 16px;
+}
+.photoPreviewBox {
+  font-size: 11px;
+  height: 50px;
+  border: 1px solid #666666;
+  width: 45px;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #dddddd;
+}
+table {
+  font-size: 12px;
+  color: #555555;
+}
+h1,
+h2,
+h3,
+strong,
+label,
+.strong {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+form {
+  margin: 0;
+  paddgroupsing: 0;
+}
+img {
+  border: 0;
+}
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #528bc0;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ff4000;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.inlinert {
+  display: inline;
+  margin: 0px 0px 0px 5px;
+  border: 0px;
+}
+.inlinelt {
+  display: inline;
+  margin: 0px 5px 0px 0px !important;
+  border: 0px;
+}
+.inlineblock {
+  display: inline-block;
+}
+.floatR {
+  float: right;
+  display: inline;
+}
+.floatL {
+  float: left;
+  display: inline;
+}
+.hidden {
+  display: none;
+}
+.fakeLink {
+  cursor: pointer;
+}
+.center {
+  text-align: center;
+}
+*html body {
+  padding-bottom: 15px !important;
+}
+/* - - END COMMON - - */
+
+/* - - LAYOUT - - */
+#homeBg {
+  width: 850px;
+  background: #ffffff;
+  border: 1px solid #a6a69a;
+  margin: 10px auto;
+  padding: 0 0 10px 0;
+  z-index: 0;
+}
+#container {
+  width: 800px !important;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+#content {
+  padding: 0;
+  margin: 5px 0 0 0;
+  position: relative;
+}
+#controlPanel {
+  z-index: 4;
+}
+
+#bottom_frame {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.flo2 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.flo0,
+.flo1,
+.flo2,
+.flo3,
+.flo4 {
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  zoom: 1;
+}
+.flo0:after,
+.flo1:after,
+.flo2:after,
+.flo3:after,
+.flo4:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.lc {
+  float: left;
+  display: inline;
+  position: relative;
+}
+.rc {
+  float: right;
+  display: inline;
+  position: relative;
+}
+.flo4 .lc,
+.flo3 .rc {
+  z-index: 5;
+  width: 160px;
+}
+.flo2 .lc,
+.flo1 .rc {
+  z-index: 5;
+  width: 300px;
+}
+.flo1 .lc,
+.flo2 .rc {
+  z-index: 2;
+  width: 490px;
+}
+.flo3 .lc,
+.flo4 .rc {
+  z-index: 2;
+  width: 630px;
+}
+.tabModuleContent .flo1 .lc,
+.tabModuleContent .flo2 .rc {
+  width: 470px;
+}
+.tabModuleContent .flo3 .lc,
+.tabModuleContent .flo4 .rc {
+  width: 610px;
+}
+/* - - END LAYOUT - - */
+
+/* - - FOOTER - - */
+#footer_container {
+  width: 850px;
+  margin: 0 auto;
+}
+#footer {
+  font-size: 10px;
+  line-height: 1em;
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  color: #666666;
+}
+#footer a {
+  font-size: 10px;
+  color: #666666;
+}
+/* - - END FOOTER - - */
+
+/* - - NOTIFICATION AND STATUS BOXES - - */
+.statusmessagebox {
+  border: 1px solid #d7d7d7;
+  background: none;
+  padding: 3px;
+  margin: 0 0 5px 0;
+}
+.notificationbox {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/msg_check.gif)
+    5px center no-repeat;
+}
+.confirmbox {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/msg_info.gif)
+    5px center no-repeat;
+}
+.errorbox,
+.commonmsgbox,
+.notificationbox,
+.confirmbox {
+  position: relative;
+  background-color: #f0f0f0 !important;
+  padding: 10px 10px 10px 42px;
+}
+.errorbox {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/msg_error.gif)
+    5px center no-repeat;
+}
+.errorbox h2,
+.commonmsgbox h2,
+.notificationbox h2,
+.confirmbox h2 {
+  padding: 0;
+  line-height: 18px;
+}
+.errorbox h2,
+.commonmsgbox h2 {
+  color: #eb0000;
+}
+.errorbox .boxcontent,
+.commonmsgbox .boxcontent,
+.notificationbox .boxcontent,
+.confirmbox .boxcontent {
+  padding: 5px 0 5px 0;
+}
+.commonmsgbox {
+  padding: 10px;
+}
+.notificationbox h2 {
+  color: #2b8902;
+}
+.confirmbox h2 {
+  color: #0477ab;
+}
+.confirmbox span.buttonBox {
+  padding-left: 10px;
+}
+.confirmbox span.buttonBox a {
+  font-size: 95%;
+}
+.confirmbox div.buttonBox {
+  margin: 7px 0 0 0;
+}
+
+/* - - END NOTIFICATION AND STATUS BOXES - - */
+
+/* - - CLEARS - - */
+/* clears for use outside of content divs */
+.clearLeftNoHeight {
+  clear: left;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.clearRightNoHeight {
+  clear: right;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.clearBothNoHeight {
+  clear: both;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+/* clear fix: assign to a content div that contains floats to ensure that div stretches to contain it's floats */
+.clearfix:after,
+clearFix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  clear: both;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+.clearfixLt:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: left;
+  visibility: hidden;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+/* fixie \*/
+* html .clearfix,
+* html .clearfixLt,
+* html .clearfixRt {
+  display: inline-block;
+} /**/
+.clearFix {
+  display: inline-block;
+}
+html > body .clearFix {
+  display: block !important;
+} /*For Gecko-based browsers*/
+/* - -  END CLEARS - - */
+
+/* - - COLORS, COPY AND MISC STYLES - - */
+p {
+  margin: 6px 0;
+  padding: 0;
+}
+.narrow {
+  font-size: 93%;
+  font-family: Tahoma, Arial, sans-serif;
+}
+/* colors */
+.sn_black {
+  color: #333333;
+}
+.sn_grey {
+  color: #555555;
+}
+.sn_orange {
+  color: #ff4400;
+}
+.sn_green,
+a.sn_green,
+a.sn_green:hover {
+  color: #333333;
+}
+.sn_ltgreen {
+  color: #eaead7;
+}
+.sn_dkgreen,
+a.sn_dkgreen,
+a.sn_dkgreen:hover {
+  color: #528bc0;
+}
+.sn_blue,
+a.sn_blue,
+a.sn_blue:hover {
+  color: #68a6ba;
+}
+.sn_dkblue,
+a.sn_dkblue,
+a.sn_dkblue:hover {
+  color: #086a89;
+}
+/* border colors */
+.sn_greenbor {
+  border: 1px solid #c3c3c3;
+}
+.sn_bluebor {
+  border: 1px solid #68a6ba;
+}
+.sn_dkbluebor {
+  border: 1px solid #086a89;
+}
+/* background colors */
+.sn_greenbg {
+  background: #c3c3c3;
+}
+.sn_ltgreenbg {
+  background: #f4f4eb;
+}
+.sn_bluebg {
+  background: #68a6ba;
+}
+.sn_dkbluebg {
+  background: #086a89;
+}
+.sn_ltbluebg {
+  background: #cde5e5;
+}
+.sn_ltbluebg2 {
+  background: #e8e8e8;
+}
+.sn_ltbluebg3 {
+  background: #f1f8f8;
+  border: 1px solid #1c6c94;
+}
+/* misc */
+.icon {
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  padding: 3px 0 3px 20px;
+}
+.sn_blue_ctb {
+  border-top: 1px solid #086a89 !important;
+  margin: 5px -10px 0 -10px;
+  padding: 5px 10px 0 10px;
+  text-align: center;
+}
+.redboldtext {
+  color: red !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* - - END COLORS, COPY AND MISC STYLES - - */
+
+/* - - LISTS - - */
+ul.inlinelist li {
+  display: inline;
+}
+ul.bullets {
+  list-style-type: disc;
+  margin: 0 0 15px 15px;
+}
+ol.numbers {
+  list-style-type: decimal;
+  margin: 0 0 15px 20px;
+}
+ul.sn_iconul li {
+  background-position: 0px 2px;
+  background-repeat: no-repeat;
+  padding: 0 0 3px 20px;
+  font-size: 93%;
+} /* fits 16x13px icon, pass icon image in XSL */
+ul.sn_orangearrowsul li {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/sn_orangearrow.gif)
+    no-repeat 0px 4px;
+  padding-left: 8px;
+  font-size: 93%;
+}
+ul.w_presscenter li {
+  list-style-type: disc;
+  margin: 0 0 10px 20px;
+}
+/* - - END LISTS - - */
+
+/* - - BOXES AND BOX COMPONENTS - - */
+/* boxes */
+.commonbox {
+  position: relative;
+  width: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+.boxcontent {
+  position: relative;
+  padding: 7px 10px;
+}
+/*fixie\*/
+* html .commonbox,
+* html .boxcontent {
+  height: 1%;
+} /* */
+.sn_scroll {
+  margin: 0;
+  padding: 0 10px 10px 10px;
+  clear: left;
+}
+/* header styles */
+h1.snhome,
+h3 {
+  font-size: 117%;
+  font-weight: bold;
+  margin: 0 0 3px 0;
+  padding: 0;
+}
+h2.sn {
+  position: relative;
+  font-size: 138% !important;
+  padding: 4px 0 6px 0;
+  margin: 0;
+}
+/* box components */
+.sn_subnav {
+  padding: 7px 10px;
+  margin: 0 -10px 10px -10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.sn_subnav2 {
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+}
+.sn_subnav3 {
+  padding: 7px 10px;
+  margin: 0 -10px -7px -10px;
+  color: #ffffff;
+}
+.sn_subnav span,
+.sn_subnav3 span {
+  margin: 0 3px;
+  color: #ffffff;
+}
+.sn_subnav a,
+.sn_subnav3 a {
+  font-weight: normal !important;
+  color: #ffffff !important;
+}
+.sn_subnav2 a {
+  font-size: 0.8em !important;
+}
+.viewall {
+  padding: 2px 10px;
+  font-weight: bold;
+}
+.dr a,
+.viewall a {
+  color: #196b91;
+}
+.dr a:visited,
+.viewall a:visited {
+  color: #196b91;
+}
+.action_panel {
+  background-color: #eeeeee;
+}
+.action_panel ul li {
+  margin-left: 30px;
+  padding: 5px 0;
+  font-weight: bold;
+}
+.friends_panel {
+  background: none;
+  position: relative;
+  padding: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+/*fixie\*/
+* html .friends_panel {
+  height: 1%;
+} /* */
+.friends_panel ul a {
+  color: #196b91;
+}
+.friends_panel ul a:visited {
+  color: #196b91;
+}
+.friends_panel .flogrid75 .flogriditem {
+  margin-top: 7px !important;
+  margin-bottom: 0 !important;
+}
+#yourStats a {
+  font-size: 110%;
+}
+#yourStats span {
+  color: #528bc0;
+  font-size: 110%;
+}
+#friendtrackerPanel a {
+  color: #ff661a;
+}
+.nameLink {
+  color: #528bc0 !important;
+}
+/* - - END BOXES AND BOX COMPONENTS - - */
+
+/* Basic Tab Module: Default color is green. Add color class such as dkBlueTabModule to outermost div to change color scheme. */
+
+.tabModulesHeader {
+  font-size: 110%;
+  font-weight: bold;
+  padding: 5px 7px 0px 25px;
+  color: #333333;
+}
+.tabModuleHeader {
+  font-size: 120%;
+  font-weight: bold;
+  padding: 5px 7px 5px 5px;
+  color: #ffffff;
+  background: #086989;
+  margin-left: 25px;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tabModulePane {
+  position: relative;
+  display: inline;
+}
+.tabModuleTabs {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/greydot.gif)
+    repeat-x bottom left;
+}
+.tabModuleTabs div.tab {
+  font-size: 93%;
+  font-weight: bold;
+  border: 1px solid;
+  padding: 5px 4px;
+  margin: 0 -1px 0 0;
+  float: left;
+  display: inline;
+  position: relative;
+  border-color: #c3c3c3;
+  color: #528bc0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.tabModuleTabs div.icon {
+  padding-left: 25px;
+  background-repeat: no-repeat !important;
+  background-position: 4px 4px !important;
+}
+.tabModuleTabs div.tab a,
+.tabModuleSubTabs a,
+.tabModuleMorelink a {
+  color: #528bc0 !important;
+}
+.tabModuleTabs .timeStamp {
+  color: #ff6619;
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+}
+.tabModuleTabs div.selected {
+  color: #333333 !important;
+  border-bottom: 1px solid #ffffff !important;
+  background-color: #ffffff !important;
+}
+.tabModuleTabs div.selected a {
+  color: #333333 !important;
+}
+/*fixie\*/
+* html .tabModuleTabs div.plug {
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/greydot.gif)
+    no-repeat bottom left;
+} /**/
+.tabModuleSubTabs {
+  font-size: 93%;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #c3c3c3;
+}
+.tabModuleSponsor {
+  position: absolute;
+  top: -22px;
+  right: -6px;
+}
+.tabModuleSponsorHome {
+  position: absolute;
+  right: -6px;
+}
+.tabModuleSubTabs a.selected {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/sn_orangearrow.gif)
+    no-repeat 0 50%;
+  padding-left: 7px;
+}
+.tabModuleContent {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #c3c3c3;
+  background-color: #ffffff;
+}
+.tabModuleContentEmpty {
+  padding: 10px;
+}
+.tabModuleMorelink {
+  position: relative;
+  line-height: 1.3em;
+  font-size: 93%;
+  text-align: right;
+  font-weight: bold;
+  border-top: 1px solid;
+  padding: 3px 7px;
+  margin: 0;
+  border-color: #c3c3c3;
+  background: #f7f7f7;
+  color: #528bc0;
+  text-decoration: none;
+}
+.tabModuleMorelinkExplore {
+  position: relative;
+  line-height: 1.3em;
+  font-size: 93%;
+  text-align: right;
+  font-weight: bold;
+  padding: 3px 30px;
+  margin: 0;
+  color: #528bc0;
+  text-decoration: none;
+}
+#updatesSubTabs {
+  margin: 0;
+  padding: 0;
+  font-size: 0.92em;
+  text-align: right;
+}
+#updatesSubTabs ul {
+  padding: 5px 0 7px 7px;
+}
+#updatesSubTabs ul li {
+  display: inline;
+  font-weight: bold;
+}
+#updatesSubTabs ul li.divider {
+  padding: 0 5px 0 5px;
+}
+
+/* light blue */
+.ltBlueTabModule .tabModuleTabs {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/ltbluedot.gif)
+    repeat-x bottom left;
+}
+.ltBlueTabModule .tabModuleTabs div.tab {
+  border-color: #c3c3c3;
+  color: #528bc0;
+  background: #f7f7f7;
+}
+.ltBlueTabModule .tabModuleTabs div.tab a,
+.ltBlueTabModule .tabModuleSubTabs a,
+.ltBlueTabModule .tabModuleMorelink a {
+  color: #086989 !important;
+}
+.ltBlueTabModule .tabModuleTabs div.plug {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/ltbluedot.gif)
+    no-repeat bottom left;
+}
+.ltBlueTabModule .tabModuleSubTabs {
+  border-color: #68a6ba;
+}
+.ltBlueTabModule .tabModuleContent {
+  border-color: #68a6ba;
+}
+.ltBlueTabModule .tabModuleMorelink {
+  border-color: #e1edf1;
+  background: #ffffff;
+  color: #086989;
+}
+/* dark blue */
+.dkBlueTabModule .tabModuleTabs {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/dkbluedot.gif)
+    repeat-x bottom left;
+}
+.dkBlueTabModule .tabModuleTabs div.tab {
+  border-color: #086989;
+  color: #086989;
+  background: #b4d2db;
+}
+.dkBlueTabModule .tabModuleTabs div.tab a,
+.dkBlueTabModule .tabModuleSubTabs a,
+.dkBlueTabModule .tabModuleMorelink a {
+  color: #086989 !important;
+}
+.dkBlueTabModule .tabModuleTabs div.plug {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/dkbluedot.gif)
+    no-repeat bottom left;
+}
+.dkBlueTabModule .tabModuleSubTabs {
+  border-color: #086989;
+}
+.dkBlueTabModule .tabModuleContent {
+  border-color: #086989;
+}
+.dkBlueTabModule .tabModuleMorelink {
+  border-color: #b4d2db;
+  background: #ffffff;
+  color: #086989;
+}
+/* light grey */
+.ltGreyTabModule .tabModuleTabs {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/greydot.gif)
+    repeat-x bottom left;
+}
+.ltGreyTabModule .tabModuleTabs div.tab {
+  border-color: #c3c3c3;
+  color: #528bc0;
+  background-color: #f7f7f7;
+}
+.ltGreyTabModule .tabModuleTabs div.tab a,
+.ltGreyTabModule .tabModuleSubTabs a {
+  color: #528bc0 !important;
+}
+.ltGreyTabModule .tabModuleMorelink a {
+  color: #ff4000;
+}
+
+.ltGreyTabModule .tabModuleTabs div.plug {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/greydot.gif)
+    no-repeat bottom left;
+}
+.ltGreyTabModule .tabModuleSubTabs {
+  border-color: #c3c3c3;
+}
+.ltGreyTabModule .tabModuleContent {
+  border-color: #c3c3c3;
+}
+.ltGreyTabModule .tabModuleMorelink {
+  border: 0;
+  background: #f7f7f7;
+  color: #ff4000;
+}
+
+/* Basic Buttons */
+.buttonBox {
+  margin: 10px 0;
+}
+/*fixie\*/
+* html .buttonbox {
+  padding: 4px 0;
+  margin: 10px 0 6px 0;
+}
+.buttonlist li {
+  margin: 10px 0 !important;
+}
+.greenButton,
+.buttonBox a,
+.buttondiv a,
+.buttonlist a {
+  font-weight: bold;
+  font-size: 93%;
+  color: #528bc0 !important;
+  background-color: #f7f7f7;
+  border: 1px solid #c3c3c3;
+  padding: 3px 9px;
+  margin: 0 10px 10px 0 !important;
+  white-space: nowrap;
+}
+.buttonbox .submitbutton {
+  color: white !important;
+}
+.dkBlueLink {
+  font-weight: bold;
+  font-size: 93%;
+  color: #086989 !important;
+  background-color: #b4d2db;
+  padding: 3px 9px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.dkBlueButton {
+  font-weight: bold;
+  font-size: 93%;
+  color: #086989 !important;
+  background-color: #b4d2db;
+  border: 1px solid #086989;
+  padding: 3px 9px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.dkRedButton {
+  font-weight: bold;
+  font-size: 93%;
+  color: #333333 !important;
+  background-color: #f1dddd;
+  border: 1px solid #333333;
+  padding: 3px 9px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+/* - - CONTROL PANEL - - */
+/* home page tabs, will only work inside of a 490px container or layout column */
+#controlPanel {
+  padding: 0 0 8px 0;
+}
+#controlPanel h4 {
+  margin: 0;
+  padding: 0 0 5px 0;
+  font-size: 1.2em;
+}
+#controlPanel table {
+  width: 100%;
+}
+#controlPanel table td {
+  vertical-align: top;
+  padding-right: 10px;
+  width: 33%;
+}
+#controlPanel select {
+  margin-top: 5px;
+  color: #528bc0 !important;
+  font-family: arial, helvetica, sans-serif !important;
+  font-size: 1em;
+  font-weight: bold;
+}
+#controlPanel ul.alerts li,
+#controlPanel ul.tools li {
+  line-height: 140%;
+}
+#controlPanel ul.alerts li a {
+  color: #ff6619;
+}
+#controlPanel ul.tools li {
+  line-height: 160%;
+}
+#controlPanel ul.tools li a {
+  font-weight: bold;
+}
+#yourStats {
+}
+#yourStats table {
+  font-size: 87% !important;
+}
+#yourStats li {
+  font-size: 87% !important;
+}
+.sn_hometabs {
+  position: relative !important;
+  height: 21px !important;
+  margin: 0 !important;
+  padding: 0px !important;
+  width: auto !important;
+  text-align: center !important;
+  background: #ffffff;
+}
+/*fixie\*/
+* html .sn_hometabs {
+  margin-top: 5px !important;
+}
+* html .clearLeftNoHeight {
+  margin-top: -8px;
+} /**/
+.sn_hometabs div.tab {
+  width: 77px !important;
+  height: 15px !important;
+  float: left !important;
+  margin-left: 2px !important;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/home/sn_tabbutton_bg.gif)
+    repeat-x;
+  text-align: center !important;
+  padding-top: 1px !important;
+}
+.sn_hometabs a {
+  font-size: 11px !important;
+  font-weight: bold !important;
+  color: #528bc0 !important;
+  text-decoration: none !important;
+}
+/*fixie\*/
+* html .sn_hometabs div.tab {
+  width: 79px !important;
+  height: 19px !important;
+}
+* html .sn_hometabs div.firstTabIE {
+  margin-left: 1px !important;
+}
+/* */
+.sn_event_links a,
+.sn_event_links a:hover,
+.sn_event_links a:visited {
+  color: #ff6619;
+}
+.sn_event_links div {
+  display: inline;
+  color: #ff6619;
+}
+/* - - END CONTROL PANEL - - */
+
+/* - - 1 AND 2 COL LAYOUTS FOR PHOTO AND DATA - - */
+.sn_2col {
+  padding: 0;
+  margin: 0 0 10px 0;
+  position: relative;
+}
+.sn_2colborder {
+  padding: 0 0 5px;
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+/* image divs for left side by img size */
+.imgblock50,
+.imgblock65homeprofile,
+.imgblock65,
+.imgblock85,
+.imgblock85placeHolder {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #555555;
+  background: #ffffff;
+  text-align: center;
+}
+.imgblock50 {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+}
+.imgblock50 img {
+  height: 50px;
+  margin: 0px auto;
+}
+.imgblock65cell {
+  width: 65px;
+  padding-right: 15px;
+}
+.imgblock65homeprofile {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 2px;
+}
+.imgblock65homeprofile img {
+  height: 110px;
+  margin: 0px auto;
+}
+.imgblock65 {
+  width: 65px;
+  height: 65px;
+}
+.imgblock65 img {
+  height: 65px;
+  margin: 0px auto;
+}
+.imgblock85 {
+  width: 85px;
+  height: 85px;
+}
+.imgblock85placeHolder {
+  width: 85px;
+  height: 85px;
+}
+.imgblock85 img {
+  height: 85px;
+  margin: 0px auto;
+}
+/* float left for use in 2 col layout item must include all classes of imgblocks above */
+.sn_2col .imgblock85,
+.sn_2col .imgblock50,
+.sn_2col .imgblock65,
+.sn_2colborder .imgblock85,
+.sn_2colborder .imgblock50,
+.sn_2colborder .imgblock65 {
+  float: left !important;
+  display: inline !important;
+}
+/* data divs for right side by image size */
+.data50,
+.data65,
+.data85 {
+  width: auto;
+  padding: 0;
+}
+.data50 {
+  margin: 0 0 0 60px;
+}
+.data65 {
+  margin: 0 0 0 75px;
+}
+.data85 {
+  margin: 0 0 0 95px;
+}
+/* generic 49% column */
+.sn_data_halfcol {
+  width: 49.1%;
+  float: left;
+  display: inline;
+}
+/* data div for 1 col */
+.sn_data {
+  margin: 0;
+  padding: 0;
+}
+/* - - END 1 AND 2 COL LAYOUTS FOR PHOTO AND DATA - - */
+
+/* - - GRID LAYOUTS - - */
+.sn_grid4row,
+sn_grid3row {
+  position: relative;
+  padding: 10px 0px 10px 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sn_grid4item,
+.sn_grid3item,
+.sn_grid2item {
+  position: relative;
+  float: left;
+  display: inline;
+  text-align: center;
+  padding: 0;
+  margin: 0px;
+}
+.sn_grid4item {
+  width: 24%;
+}
+.sn_grid3item {
+  width: 33%;
+}
+.sn_grid2item {
+  width: 40%;
+}
+/* center img box and text in gridXitem divs */
+.sn_grid2item div,
+.sn_grid4item div,
+.sn_grid3item div {
+  text-align: center;
+}
+.sn_grid2item .imgblock50,
+.sn_grid2item .imgblock65,
+.sn_grid2item .imgblock85,
+.sn_grid4item .imgblock50,
+.sn_grid4item .imgblock65,
+.sn_grid4item .imgblock85,
+.sn_grid3item .imgblock50,
+.sn_grid3item .imgblock65,
+.sn_grid3item .imgblock85 {
+  margin: 0 auto 5px auto;
+}
+
+.flogrid75,
+.flogridp {
+  zoom: 1;
+}
+.flogrid75:after,
+.flogridp:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.flogrid50 {
+  margin-right: -17px;
+  margin-left: 5px;
+}
+.flogrid75 {
+  margin: 0 auto 5px auto;
+  width: 292px;
+}
+.flogridp {
+  margin-right: -13px;
+  margin-left: 8px;
+}
+.flogriditem {
+  float: left;
+  display: inline;
+  margin-right: 17px;
+  margin-bottom: 10px;
+}
+.flogridp .flogriditem {
+  margin-right: 13px;
+  width: 101px;
+  height: 87px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/pf.gif)
+    no-repeat;
+}
+.flogrid75 .flogriditem {
+  width: 75px;
+}
+.ir {
+  background: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+.dr {
+  text-align: center;
+  background: transparent;
+  padding: 3px 0;
+  border-top: 1px solid #ffffff;
+  white-space: nowrap;
+}
+.flogridp .ir {
+  width: 93px;
+  height: 73px;
+  margin: 3px 0 0 4px;
+}
+.flogridp .ir img {
+  margin: 0 auto;
+  height: 73px;
+}
+.flogrid75 .ir {
+  width: 75px;
+  height: 75px;
+}
+.flogrid75 .ir img {
+  margin: 0 auto;
+  height: 75px;
+}
+/* - - END GRID LAYOUTS - - */
+
+/* - - POPUP PANELS - - */
+/* shared panel styles */
+.sn_closeX {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.popupPanelLink {
+  display: block;
+  z-index: 199 !important;
+  position: relative;
+}
+.popupPanelClass {
+  margin: 0;
+  padding: 7px 10px !important;
+  border: 2px solid #68a6ba;
+  background: #ffffff;
+  position: absolute;
+  z-index: 2000 !important;
+  text-align: left;
+  top: -7px;
+}
+.popupPanelClass div,
+.popupPanelClass input {
+  margin: 3px 0;
+}
+.sn_panel_hdr {
+  font-size: 14px !important;
+  font-weight: bold;
+  margin: 0 0 5px 5px;
+}
+/* specific panel styles */
+.shoutoutPanel {
+  width: 220px;
+  right: 165px;
+  top: 60px;
+}
+.shoutoutPanel .shoutoutTitle {
+  position: relative;
+  top: -8px;
+  left: 5px;
+  color: #65a6bc;
+  font-size: 16px;
+  font-style: italic;
+  display: inline;
+}
+.horoscopePanel {
+  width: 260px;
+  left: 38px;
+  top: 60px;
+}
+.friendListPanel {
+  width: 450px;
+}
+*html .friendListPanel {
+  width: 475px;
+  margin: 0;
+}
+.friendListPanel input {
+  border: 0px;
+  display: inline;
+}
+#photobucketPanel {
+  width: 220px;
+  height: 475px;
+  left: 420px;
+  top: 250px;
+  padding: 28px 0 0 0 !important;
+}
+#horoscopePanel h2 img {
+  margin: 0 0 -5px 0;
+}
+/* - - END POPUP PANELS - - */
+
+/* - - TEASESR BOX aka TOP SEARCHES - - */
+#teaserBox {
+  width: auto;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+#teaserBox h2 {
+  display: none;
+}
+#teaserBox.commonbox {
+  margin: 0px !important;
+  padding: 0px !important;
+  background: none !important;
+  border: none !important;
+}
+#teaserBox ol {
+  margin: 0px 0px 0px 35px;
+  padding: 0px;
+  list-style-type: decimal !important;
+  color: #ff4400 !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+}
+#teaserBox ol li {
+  color: #ff4400 !important;
+  margin-bottom: 2px !important;
+}
+#teaserBox ol li a {
+  text-decoration: none !important;
+}
+/* - - END TEASESR BOX aka TOP SEARCHES - - */
+
+/* - - SPONSORED LINKS - - */
+#sponsorsAd {
+  border: 1px solid #b8b8b8;
+  position: relative;
+  margin: 0 0 10px 0;
+}
+.sponsorsAd,
+.sponsorsAdCols {
+  padding: 0 0 5px 0;
+}
+.adCols {
+  width: 23%;
+  position: relative;
+  float: left;
+  display: inline;
+}
+/* "sponsored links" copy */
+.sponsorsAd h2,
+.sponsorsColAd h2 {
+  color: #000000;
+  font-size: 93% !important;
+  text-transform: lowercase;
+  font-weight: lighter;
+  margin: 5px 5px 0 5px;
+  padding: 0;
+}
+/* ad headline  */
+.sponsorsAd h3,
+.sponsorsColAd h3 {
+  font-size: 100%;
+  font-weight: bold;
+  margin: 5px 5px 0 5px;
+  line-height: 100%;
+}
+.sponsorsAd h3 a,
+.sponsorsColAd h3 a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+/* ad body */
+.sponsorsAd p,
+.sponsorsColAd p {
+  font-size: 93%;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  margin: 3px 5px 0 5px;
+}
+.slfooterGrey a {
+  color: #555555;
+  text-decoration: none;
+}
+/* ad bottom link */
+.slfooterGreen a {
+  color: #339933;
+  text-decoration: none;
+}
+/* - - END SPONSORED LINKS - - */
+
+/* - - DART ADS - - */
+#ad300x250 {
+  margin: 0px 0px 10px 0px;
+}
+#squareAd {
+  margin-bottom: 10px;
+}
+#ad300x250 img {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+/* - - END DART ADS - - */
+
+/* - - SHOUTOUTS DISPLAY - - */
+.shoutoutMiniQuote {
+  background: transparent;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: 2px;
+  left: -22px;
+  z-index: 110001;
+}
+.shoutoutMiniBox {
+  background: transparent
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/so_mini.gif)
+    no-repeat;
+  width: 227px;
+  height: 48px;
+  position: absolute;
+  top: 8px;
+  left: -25px;
+  z-index: 11000;
+}
+.shoutoutMiniContent {
+  padding: 0;
+  overflow: hidden;
+}
+.shoutoutMiniClose {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+}
+/* - - END SHOUTOUTS DISPLAY - - */
+
+/* - - TRUE STYLES - - */
+.trueSpot .imgblock85 {
+  border: 2px solid #0066cc;
+  width: 83px;
+  height: 83px;
+}
+.trueSpotGm .imgblock65 {
+  width: 63px;
+  height: 63px;
+  border: 2px solid #0066cc;
+}
+.trueSpot a,
+.trueSpotGm a {
+  color: #0066cc;
+}
+.trueSpotG {
+  margin-top: -5px;
+  padding-top: 5px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/pb_true_circle_04.gif)
+    no-repeat 99% 9% #f2f7fc;
+}
+.trueSpotG a {
+  font-weight: bold;
+}
+.trueSpotG .buttonBox {
+  text-align: center;
+}
+.trueSpotG .buttonBox a {
+  border-color: #086989;
+  background-color: #e1edef;
+  color: #086989 !important;
+}
+/* - - END TRUE STYLES - - */
+
+/* - - HELP STYLES - - */
+.help {
+  font-weight: normal;
+  margin-left: 5px;
+}
+.questionMark {
+  margin: 0 1px;
+}
+/* - - HELP STYLES - - */
+
+/* - - LOGIN BOX STYLES - - */
+#signIn .signup {
+  float: right;
+  padding: 10px 10px 0 0;
+  font-weight: bold;
+}
+#signIn .login {
+  font-size: 138% !important;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+#signIn .loginButton input {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 93%;
+  color: #fff !important;
+  background-color: #528bc0;
+  border: 1px solid #c4c4c4;
+  padding: 3px 0;
+  margin: 0 10px 10px 0 !important;
+  white-space: nowrap;
+  width: 75px;
+}
+#signIn label {
+  font-weight: normal;
+}
+#signIn input.orangebutton {
+  font-weight: bold;
+  font-size: 93%;
+  background: #ff2000 !important;
+  border: 1px solid #c4c4c4;
+  width: 95px;
+}
+.loginBox {
+  height: 186px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/home/loginBox_bg.jpg)
+    no-repeat;
+  position: relative;
+}
+#loginInfoText {
+  position: absolute;
+  width: 350px;
+  background: #fff;
+  padding: 5px;
+  z-index: 1000;
+  border: 1px solid #eee;
+  top: 30px;
+  left: 225px;
+  font-size: 11px;
+}
+/* - - LOGIN BOX STYLES - - */
+
+/* - - USER SEARCH BOX STYLES - - */
+#userSearchHome .seewhoson {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/seewhoson_icon.gif)
+    0 0 no-repeat;
+  padding: 6px 0 6px 30px;
+  font-size: 120%;
+}
+#userSearchHome p,
+#userSearchHome form {
+  padding-left: 30px;
+}
+#userSearchHome .searchButton input {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 93%;
+  color: #666 !important;
+  background-color: #f7f7f7;
+  border: 1px solid #c4c4c4;
+  padding: 3px 0;
+  margin: 0 !important;
+  white-space: nowrap;
+  width: 65px;
+}
+/* - - USER SEARCH BOX STYLES - - */
+
+/* - - FRIEND TRACKER SPONSOR - - */
+.trackerSponsor {
+  text-align: right;
+  z-index: -100;
+  margin: 0 0 -17px 0;
+}
+.trackerSponsor a {
+  position: relative;
+  z-index: 2;
+}
+#homePage #moduleFriendUpdates .tabModuleTabs {
+  clear: both;
+}
+#moduleFriendUpdates h2 {
+  padding-top: 30px;
+}
+/* - - FRIEND TRACKER SPONSOR - - */
+
+#bookmarkPanelContent {
+  width: 95%;
+  height: 200px;
+}
+#groupPanelContent {
+  width: 95%;
+  height: 200px;
+}
+#schoolPanelContent {
+  width: 95%;
+  height: 200px;
+}
+head:first-child + body div #schoolPanelContent {
+  height: auto !important;
+  min-height: 200px;
+}
+head:first-child + body div #bookmarkPanelContent {
+  height: auto !important;
+  min-height: 200px;
+}
+head:first-child + body div #groupPanelContent {
+  height: auto !important;
+  min-height: 200px;
+}
+
+/*-- Friend Invites in Home --*/
+.email {
+  width: 400px;
+  margin: 0 auto;
+  padding: 5px 0 0 0;
+}
+.email img {
+  float: left;
+  margin: 0 0 5px 10px;
+}
+
+/* - - FRIEND TRACKER - - */
+h3#networkActivity {
+  font-size: 1.1em;
+  padding: 0 0 5px 0;
+  margin: 0;
+  z-index: 100;
+  min-height: 20px;
+}
+*html h3#networkActivity {
+  height: 20px;
+}
+.tabModuleContentEmpty h2 {
+  font-size: 125% !important;
+  margin: 0 !important;
+  padding: 0 0 10px 0 !important;
+}
+
+/*-- Home Promo-*/
+.homePromo {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/homePromoBg.png)
+    no-repeat;
+  width: 489px;
+  height: 119px;
+}
+.homePromo .promoBox {
+  float: left;
+  margin: 53px 0 0 7px;
+  width: 150px;
+  height: 60px;
+  text-align: center;
+  color: #666;
+  padding: 0;
+}
+.homePromo .promoHead {
+  font-weight: bold;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 3px;
+}
+
+/*-- Pending Friend Requests Viral Box (AJAX version) --*/
+#viralBox {
+  width: 490px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralBg.png)
+    repeat-y;
+  margin: 5px 0 10px;
+}
+#viralBox .viralBg {
+  width: 490px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralTop.png)
+    no-repeat;
+}
+#viralBox .viralFooter {
+  width: 490px;
+  height: 7px;
+  overflow: hidden;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralBot.png)
+    no-repeat;
+  margin: 0;
+  padding: 0;
+}
+#viralBox .viralContent {
+  padding: 7px 8px 0;
+}
+#viralBox .viralHeading {
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  width: 405px;
+}
+#viralBox .viralHeading a {
+  font-size: 11px;
+  font-weight: normal;
+  padding-left: 10px;
+}
+#viralBox .viralClose {
+  font-size: 10px;
+  float: right;
+  width: 65px;
+  text-align: right;
+}
+#viralBox .viralClose a {
+  border: 0;
+  text-decoration: none;
+}
+#viralBox input {
+  width: 100px;
+}
+
+#viralUserlist {
+  width: 100%;
+  overflow: hidden;
+}
+#viralUserlistBox {
+  width: 10000px;
+}
+#viralUserlistContainer {
+  margin: 5px auto;
+  width: 420px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+#viralUserlistContainer ul {
+  list-style: none;
+  text-align: center;
+}
+#viralUserlistContainer li.photoBox {
+  float: left;
+  border: 1px #9ec7e9 solid;
+  background: #e3eef7;
+  width: 98px;
+  margin: 5px 2px 0 2px;
+  text-align: center;
+  display: block;
+  display: block;
+  min-height: 100px;
+  padding: 3px 0;
+}
+* html #viralUserlistContainer li.photoBox {
+  height: 100px;
+}
+#viralUserlistContainer li.photoBox:after {
+  height: 0;
+  visibility: hidden;
+  display: block;
+  content: '.';
+  clear: both;
+}
+#viralUserlistContainer li.ajaxLoader {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/ajax-loader.gif')
+    center center no-repeat;
+}
+#viralUserlistContainer .statusMsg {
+  line-height: 105px;
+}
+#viralUserlistContainer .photo a {
+  color: #333;
+  font-size: 11px;
+  width: 74px;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#viralUserlistContainer .photo a img {
+  height: 74px;
+  border: 0;
+  margin: 0 auto;
+}
+#viralUserlistContainer span {
+  font-size: 11px;
+}
+/* Friend Recommender Viral Box */
+#viral_userlist .photoboxFRD {
+  float: left;
+  border: 1px #9ec7e9 solid;
+  background: #e3eef7;
+  width: 105px;
+  min-height: 90px;
+  margin: 5px 0 10px 10px;
+  text-align: center;
+  display: block;
+  padding: 0 0 3px 0;
+}
+* html #viral_userlist .photoboxFRD {
+  height: 90px;
+}
+#viral_userlist .photoboxFRD:after {
+  height: 0;
+  visibility: hidden;
+  display: block;
+  content: '.';
+}
+#viral_userlist .photoboxFRD a.textlink {
+  color: #3c8fd3;
+  text-decoration: none;
+}
+#viral_userlist .photoboxFRD a.txtNamelink:hover {
+  color: #fc7c3b;
+  text-decoration: underline;
+}
+#viral_userlist .photoboxFRD a.textlink:hover {
+  color: #fc7c3b;
+  text-decoration: underline;
+}
+/* SMS Viral Box */
+#viral_userlist .photoboxSMS {
+  float: left !important;
+  padding: 0 0 3px 0 !important;
+}
+#viral_userlist .photoboxSMS a {
+  float: left;
+  border: 1px #9ec7e9 solid;
+  background: #e3eef7;
+  width: 105px;
+  min-height: 90px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 0 0 3px 0;
+}
+* html #viral_userlist .photoboxSMS {
+  height: 90px;
+}
+#viral_userlist .photoboxSMS:after {
+  height: 0;
+  visibility: hidden;
+  display: block;
+  content: '.';
+}
+#viral_userlist .photoboxSMS a:hover {
+  border: 1px #ffbd9c solid;
+  text-decoration: none;
+}
+#viralBtnR {
+  float: right;
+  padding: 8px 0 6px 0;
+}
+
+#leftScroll {
+  float: left;
+  width: 22px;
+  height: 58px;
+  margin: 15px 5px 0 0;
+  cursor: pointer !important;
+}
+#rightScroll {
+  float: left;
+  width: 22px;
+  height: 58px;
+  margin: 15px 0 0 0;
+  cursor: pointer !important;
+}
+.ltArrow {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/viralLtArrow.png');
+}
+.ltArrow[class] {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralLtArrow.png')
+    0 0 no-repeat;
+}
+.rtArrow {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/viralRtArrow.png');
+}
+.rtArrow[class] {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralRtArrow.png')
+    0 0 no-repeat;
+}
+
+.ltInactive {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/viralGryLtArrow.png');
+  cursor: default !important;
+}
+.ltInactive[class] {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralGryLtArrow.png')
+    0 0 no-repeat !important;
+  cursor: default !important;
+}
+.rtInactive {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/viralGryRtArrow.png');
+  cursor: default !important;
+}
+.rtInactive[class] {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/viralGryRtArrow.png')
+    0 0 no-repeat !important;
+  cursor: default !important;
+}
+
+#viralModalBox {
+  width: 480px;
+  overflow: hidden;
+  font-size: 11px;
+}
+#viralModalBox .photobox {
+  width: 100px;
+  height: 100px;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+#viralModalBox .photobox img {
+  height: 100px;
+  margin: 0 auto;
+}
+#viralModalBox .userinfo {
+  float: left;
+  width: 370px;
+  padding-left: 10px;
+  text-align: left;
+}
+#viralModalBox .userinfo ul {
+  padding-bottom: 10px;
+}
+#viralModalBox .userinfo ul li {
+  padding: 0 0 5px 0;
+}
+#viralModalBox .userinfo a {
+  font-weight: bold !important;
+  text-decoration: underline;
+}
+#viralModalBox .buttonbox {
+  float: right;
+  font-size: 12px;
+  margin: 0 !important;
+}
+#viralModalBox .buttonbox a {
+  text-decoration: none;
+}
+
+/* friend recommender and reverse lookup campaigns */
+#viral_userlist {
+  margin: 5px 0;
+}
+#viral_userlist .photobox {
+  float: left;
+  background: #fff;
+  width: 105px;
+  height: 100px;
+  margin-right: 10px;
+  text-align: center;
+}
+#viral_userlist .photo {
+  margin: 3px;
+  overflow: hidden;
+  *width: 99px;
+}
+#viral_userlist .photo img {
+  height: 75px;
+  border: 0;
+}
+#viral_userlist a {
+  color: #333;
+  font-size: 11px;
+}
+
+.actionButton {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn-rt.png')
+    no-repeat top right;
+  display: inline;
+  margin: 0 7px 0 0;
+  padding: 3px 0px 7px;
+  *padding: 0px;
+}
+.actionButton a {
+  background: url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn-lt.png')
+    no-repeat top left;
+  margin: 0;
+  padding: 2px 15px 4px;
+  *padding: 2px 15px 2px;
+  *height: 20px;
+}
+.actionButton a,
+.actionButton a:active,
+.actionButton a:hover,
+.actionButton a:visited {
+  color: #555;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* pending friend invites campaign */
+#pending_friends_form {
+  padding: 0;
+  text-align: center;
+}
+#friend_invites_container {
+  margin: 5px 0 0;
+  overflow: hidden;
+}
+#friend_invites_container .photoBox {
+  float: left;
+}
+#friend_invites_container .photo {
+  width: 88px;
+  height: 90px;
+}
+#friend_invites_container .photoThumb {
+  padding: 0;
+}
+#friend_invites_container .photoThumb .thumbBox {
+  width: 76px;
+}
+#friend_invites_container .photoThumb .thumbBorder {
+  width: 67px;
+  height: 73px;
+  padding: 3px 4px 8px;
+  *padding-bottom: 13px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+#friend_invites_container .photoThumb .thumbBorder span {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  width: 67px;
+  height: 67px;
+}
+#friend_invites_container .photoThumb .thumbBorder img {
+  height: 67px;
+  opacity: 1;
+  cursor: pointer;
+  filter: alpha(opacity=100);
+}
+#friend_invites_container .checkBox {
+  cursor: pointer;
+  position: absolute;
+  z-index: 60;
+  padding: 54px 0 0;
+}
+head:first-child + body div #friend_invites_container .checkBox {
+  padding-left: 0;
+}
+#friend_invites_container .checkBox input {
+  width: auto;
+}
+#friend_invites_container .firstName {
+  text-align: center;
+  font-size: 10px;
+  margin-top: -16px;
+  *margin-top: -14px;
+  height: 15px;
+  overflow: hidden;
+}
+#friend_invites_container .firstName a {
+  color: #333;
+}
+
+/* common styles */
+.border_c6 {
+  border: 1px solid #c6c6c6;
+}
+.bg_f7 {
+  background: #f7f7f7;
+}
+.pad_1 {
+  padding: 1px;
+}
+.pad_5 {
+  padding: 5px;
+}
+.pad_5tb {
+  padding: 5px 0;
+}
+.pad_5lr {
+  padding: 0 5px;
+}
+.pad_3 {
+  padding: 3px;
+}
+.pad_3tb {
+  padding: 3px 0;
+}
+.pad_3lr {
+  padding: 0 3px;
+}
+.m10 {
+  margin: 10px;
+}
+.m10tb {
+  margin: 10px 0;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.m20 {
+  margin: 20px;
+}
+.m20tb {
+  margin: 20px 0;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mr60 {
+  margin-right: 60px;
+}
+.txt_80 {
+  color: #808080;
+}
+a.orange_link,
+a.orange_link:hover,
+a.orange_link:visited {
+  color: #ff6619 !important;
+}
+.font11,
+.font11b {
+  font-size: 11px;
+}
+.font13,
+.font13b {
+  font-size: 13px;
+}
+.font14,
+.font14b {
+  font-size: 14px;
+}
+.font16,
+.font16b {
+  font-size: 16px;
+}
+.font18,
+.font18b {
+  font-size: 18px;
+}
+.font11,
+.font13,
+.font14,
+.font16,
+.font18 {
+  font-weight: normal;
+}
+.font11b,
+.font13b,
+.font14b,
+.font16b,
+.font18b {
+  font-weight: bold;
+}
+.color-e26a39 {
+  color: #e26a39;
+}
+.lh140 {
+  line-height: 140%;
+}
+.uline {
+  text-decoration: underline !important;
+}
+
+h2.heading {
+  background: #f3f3f3;
+  border-bottom: 1px solid #bbb;
+  padding: 5px;
+  margin: 5px 0;
+}
+h2.blueheading {
+  color: #0d91d0;
+  font-weight: normal;
+}
+.font16 {
+  font-size: 16px;
+}
+.yhilite {
+  padding: 2px 10px;
+  margin: 3px 0;
+  background: #fbf7d0;
+  border: 1px solid #eae6c0;
+  display: table;
+}
+.hilite {
+  background: #fbf7d0;
+  padding: 1px 3px;
+}
+.blueBox {
+  padding: 5px;
+  background: #eef4f9;
+  border: 1px solid #c3c3c3;
+}
+
+/* Button Styles */
+a.greyButton {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn-lt_2.png')
+    no-repeat top left;
+  display: block;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 19px;
+  height: 27px;
+  padding-left: 5px;
+  text-decoration: none;
+  color: #555;
+  margin-right: 10px;
+}
+.profileImgBox {
+  float: left;
+  width: 105px;
+  margin-right: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.profileImgBox img {
+  height: 65px;
+  border: 1px solid #c6c6c6;
+}
+a.greyButton {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn-lt_2.png')
+    no-repeat top left;
+  display: block;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 19px;
+  height: 27px;
+  padding-left: 5px;
+  text-decoration: none;
+  color: #555;
+}
+a.greyButton:link,
+a.greyButton:visited,
+a.greyButton:hover,
+a.greyButton:active {
+  color: #555;
+}
+a.greyButton span {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn-rt_2.png')
+    no-repeat top right;
+  display: block;
+  padding: 4px 15px 4px 10px;
+  cursor: pointer;
+}
+a.blueBigButton {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn_bigBlueLt.png')
+    no-repeat top left;
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+  height: 36px;
+  padding-left: 4px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+}
+a.blueBigButton:link,
+a.blueBigButton:visited,
+a.blueBigButton:hover,
+a.blueBigButton:active {
+  color: #fff;
+}
+a.blueBigButton span {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn_bigBlueRt.png')
+    no-repeat top right;
+  display: block;
+  padding: 4px 19px 4px 15px;
+  cursor: pointer;
+}
+a.blueButton {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn_BlueLt.png')
+    no-repeat top left;
+  display: block;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  height: 26px;
+  padding-left: 4px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+}
+a.blueButton:link,
+a.blueButton:visited,
+a.blueButton:hover,
+a.blueButton:active {
+  color: #fff;
+}
+a.blueButton span {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn_BlueRt.png')
+    no-repeat top right;
+  display: block;
+  padding: 4px 14px 4px 10px;
+  cursor: pointer;
+}
+a.redButton {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn_red_lt.gif')
+    no-repeat top left;
+  display: block;
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  height: 26px;
+  padding-left: 3px;
+  text-decoration: none;
+  color: #fff;
+}
+a.redButton:link,
+a.redButton:visited,
+a.redButton:hover,
+a.redButton:active {
+  color: #fff;
+}
+a.redButton span {
+  background: transparent
+    url('https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/btn_red_rt.gif')
+    no-repeat top right;
+  display: block;
+  padding: 4px 13px 4px 10px;
+  cursor: pointer;
+}
+.lblueButton a {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/fanmarketing/btn_blue_l.gif)
+    left top no-repeat;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 33px;
+  margin: 5px 0;
+}
+.lblueButton a,
+.lblueButton a:active,
+.lblueButton a:visited {
+  color: #fff;
+  text-decoration: none;
+  cursor: hand;
+}
+.lblueButton a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.lblueButton a b {
+  padding-right: 15px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/fanmarketing/btn_blue_cr.gif)
+    right top no-repeat;
+}
+.lblueButton a,
+.lblueButton a b {
+  display: block;
+  float: left;
+}
+
+/*Modal Box*/
+.mdl-shdw-tl {
+  height: 10px;
+  width: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_shadow_tl.png');
+}
+.mdl-shdw-tl[class] {
+  height: 10px;
+  width: 10px;
+  background-image: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_shadow_tl.png);
+}
+.mdl-shdw-tr {
+  height: 10px;
+  width: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_shadow_tr.png');
+}
+.mdl-shdw-tr[class] {
+  height: 10px;
+  width: 10px;
+  background-image: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_shadow_tr.png);
+}
+.mdl-shdw-bl {
+  height: 10px;
+  width: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_shadow_bl.png');
+}
+.mdl-shdw-bl[class] {
+  height: 10px;
+  width: 10px;
+  background-image: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_shadow_bl.png);
+}
+.mdl-shdw-br {
+  height: 10px;
+  width: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_shadow_br.png');
+}
+.mdl-shdw-br[class] {
+  height: 10px;
+  width: 10px;
+  background-image: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_shadow_br.png);
+}
+.mdl-shdw-bg {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://images.friendster.com/images/modal_box/modal_shadow_bg.png');
+}
+.mdl-shdw-bg[class] {
+  background-image: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_shadow_bg.png);
+}
+
+.mdl-azure-tl {
+  width: 14px;
+  height: 29px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_azure_tl.png');
+}
+.mdl-azure-tl[class] {
+  background-image: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_azure_tl.png) !important;
+  width: 14px;
+  height: 29px;
+}
+.mdl-azure-tr {
+  width: 14px;
+  height: 29px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_azure_tr.png');
+}
+.mdl-azure-tr[class] {
+  background: transparent
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_azure_tr.png)
+    no-repeat top left;
+  width: 14px;
+  height: 29px;
+}
+.mdl-azure-tc {
+  background: transparent
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_azure_tc.png)
+    repeat;
+  height: 29px;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+}
+.mdl-azure-bl {
+  width: 14px;
+  height: 39px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_azure_bl.png');
+}
+.mdl-azure-bl[class] {
+  background: transparent
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_azure_bl.png)
+    no-repeat top left;
+  width: 14px;
+  height: 39px;
+}
+.mdl-azure-br {
+  width: 14px;
+  height: 39px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/modal_box/modal_azure_br.png');
+}
+.mdl-azure-br[class] {
+  background: transparent
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_azure_br.png)
+    no-repeat top left;
+  width: 14px;
+  height: 39px;
+}
+.mdl-azure-bc {
+  background: transparent
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/modal_box/modal_azure_bc.png)
+    repeat;
+  height: 39px;
+}
+.mdl-azure-bg {
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.w-mdl-tl {
+  width: 10px;
+  height: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/rcorner_w_tl.png');
+}
+.w-mdl-tl[class] {
+  width: 10px;
+  height: 10px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/rcorner_w_tl.png)
+    no-repeat;
+}
+.w-mdl-tr {
+  width: 10px;
+  height: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/rcorner_w_tr.png');
+}
+.w-mdl-tr[class] {
+  width: 10px;
+  height: 10px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/rcorner_w_tr.png)
+    no-repeat;
+}
+.w-mdl-bl {
+  width: 10px;
+  height: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/rcorner_w_bl.png');
+}
+.w-mdl-bl[class] {
+  width: 10px;
+  height: 10px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/rcorner_w_bl.png)
+    no-repeat;
+}
+.w-mdl-br {
+  width: 10px;
+  height: 10px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='http://images.friendster.com/images/rcorner_w_br.png');
+}
+.w-mdl-br[class] {
+  width: 10px;
+  height: 10px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/rcorner_w_br.png)
+    no-repeat;
+}
+.w-mdl-bg {
+  background: #fff;
+}
+.whiteModalInput {
+  padding: 3px;
+  width: 160px;
+  height: 30px;
+  font-size: 16px;
+  border: 2px solid #528cc6;
+  background: #fff
+    url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/inputbg_blue.png)
+    repeat-x center;
+}
+
+#moduleHeader .moduleTitle {
+  float: left;
+  width: 80%;
+}
+#moduleHeader .moduleMenu {
+  float: right;
+  width: 15%;
+  text-align: right;
+  font-size: 11px;
+  font-weight: normal;
+}
+.moduleMenu IMG {
+  margin: 3px 3px 0 0;
+  padding: 1px;
+  border: 0;
+}
+.moduleMenu IMG:hover {
+  background: #fff;
+}
+
+.newBox {
+  border: 1px solid #c6c6c6;
+  margin-bottom: 15px;
+  position: relative;
+}
+.newBox .title {
+  background: #f7f7f7;
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 3px;
+  color: #777;
+}
+.newBox .bot {
+  font-size: 11px;
+  background: #f7f7f7;
+  padding: 5px 7px;
+  border-top: 1px solid #eee;
+  margin-top: 3px;
+}
+.newBox .bot .floatL {
+  width: 25%;
+}
+.newBox .bot .floatR {
+  width: 70%;
+  text-align: right;
+}
+
+.uThumbBox,
+.uThumbBoxSmall {
+  float: left;
+  width: 86px;
+  margin: 5px 0 5px 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.uThumbBoxSmall {
+  width: 75px;
+  margin: 5px 0 5px 5px;
+}
+*html .uThumbBox {
+  margin: 5px;
+}
+*html .uThumbBoxSmall {
+  margin: 5px 0 5px 4px;
+}
+.uThumbBox img {
+  height: 65px;
+}
+.uThumbBox a.uThumb {
+  display: block;
+  height: 65px;
+  overflow: hidden;
+}
+
+/* GCash*/
+.gcash {
+  padding: 10px 0 0 10px;
+  margin: 0 0 10px 0;
+  overflow: auto;
+  height: 380px !important;
+}
+dl.selectFriend {
+  width: 90px;
+  min-width: 90px;
+  min-height: 100px;
+  border: 1px solid #c3c3c3;
+  float: left;
+  margin: 0 5px 5px 0;
+  text-align: center;
+  padding: 5px;
+}
+* html dl.selectFriend {
+  height: 100px;
+}
+dl.selectFriend:after {
+  height: 0;
+  visibility: hidden;
+  display: block;
+  content: '.';
+  clear: both;
+}
+dl.toFriendBox {
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin: 0 5px 5px 0;
+  text-align: center;
+  padding: 5px;
+}
+.selectFriend dt,
+.selectFriend dd,
+.toFriendBox dt,
+.toFriendBox dd {
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+.selectFriend dt img,
+.toFriendBox dt img {
+  height: 65px;
+}
+a.sendGCashLink {
+  font-weight: bold;
+  color: #ff4000 !important;
+}
+a.sendGCashLink:visited {
+  color: #ff4000 !important;
+}
+.gcashbox {
+  border: 1px solid #c3c3c3;
+  padding: 10px 40px 30px 10px;
+  margin-bottom: 10px;
+  background-color: #eef4f9;
+  overflow: auto;
+}
+.gcashbox p {
+  line-height: 1.7em;
+}
+.gcashbox h2 {
+  border-bottom: 1px solid #666;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  color: #666;
+}
+.gcashbox span {
+  color: #369;
+}
+.gcashbox br {
+  margin-bottom: 10px;
+}
+.bordercap {
+  border-top: 1px solid #c3c3c3;
+}
+.bordercap h3 {
+  padding-top: 15px;
+}
+.gcashSettings {
+  overflow: auto;
+  margin: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+.gcashSettings img {
+  width: 142px;
+  height: 100px;
+  float: left;
+  margin: 0 80px 20px 0;
+}
+.gcashActivated {
+  color: #2b8902;
+  margin-top: 40px;
+}
+.noGCashList li {
+  list-style: disc;
+  margin: 0 0 10px 30px;
+}
+
+/* network activity / tracker */
+.trackerBox {
+  font-family: Myriad, 'DejaVu Sans Condensed', 'Liberation Sans',
+    'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif !important;
+  font-size: 93% !important;
+  color: #666 !important;
+}
+.eventBox {
+  line-height: 1.5em;
+}
+.eventBox a {
+  color: #ff6619;
+}
+.eventBox a.blueLink {
+  color: #528bc0 !important;
+}
+h4.networkActivityHeader {
+  margin: 5px 0;
+}
+a.eventLink {
+  color: #ff6619 !important;
+}
+span.numAgo {
+  margin-right: 5px;
+}
+span.eventTimeStamp {
+  font-size: 8px;
+  color: #999;
+}
+span.schoolName {
+  font-size: 9px;
+}
+.mediaBox {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  line-height: 1.2em !important;
+}
+.mediaBox a {
+  color: #528bc0 !important;
+}
+.mediaBox .mediaBg,
+.mediaBox .mediaWhiteBg {
+  width: 428px;
+  margin: 4px 19px 0 19px;
+  padding: 3px;
+  overflow: hidden;
+}
+.mediaBox .mediaBg {
+  background-color: #f2f7ff;
+}
+.mediaBox .mediaWhiteBg {
+  background-color: #fff;
+  margin-top: 0;
+  padding-top: 0;
+}
+.mediaBox .userPhoto {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  margin-right: 5px;
+}
+.mediaBox .userPhoto img {
+  height: 50px;
+  margin: 0 auto;
+}
+.mediaBox .userInfo,
+.mediaBox .commentBox {
+  float: left;
+  width: 367px;
+}
+.mediaBox .userInfo div {
+  padding-bottom: 2px;
+}
+.mediaBox .commentBox {
+  color: #999;
+}
+.mediaBox .commentExcerpt {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+.mediaBox .commentDate {
+  font-size: 10px;
+}
+.mediaBox .commentBox blockquote,
+.mediaBox .shoutoutBox blockquote,
+.mediaBox .reviewBox blockquote {
+  margin: 0;
+  padding: 0 18px;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/quoleft.gif)
+    left top no-repeat;
+}
+.mediaBox .commentBox blockquote span,
+.mediaBox .shoutoutBox blockquote span,
+.mediaBox .reviewBox blockquote span {
+  margin: 0;
+  padding: 0 19px 0 0;
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/quoright.gif)
+    right bottom no-repeat;
+}
+.mediaBox .albumCover,
+.mediaBox .photoCommentBox .photoThumbnail {
+  height: 95px;
+  width: 125px;
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  margin-right: 5px;
+}
+.mediaBox .albumCover img,
+.mediaBox .photoCommentBox .photoThumbnail img {
+  height: 95px;
+  margin: 0 auto;
+}
+.mediaBox .albumDetails ul.actionLinks {
+  margin-top: 53px;
+}
+.mediaBox .topFriend ul.actionLinks {
+  margin-top: 23px;
+}
+.mediaBox .appDetails,
+.mediaBox .reviewBox {
+  float: left;
+  width: 315px;
+}
+.mediaBox .photosBox .photoThumbnail,
+.mediaBox .reviewThumbnail,
+.mediaBox .appThumbnail {
+  width: 106px;
+  float: left;
+  text-align: center;
+}
+.mediaBox .photosBox .photoThumbnail a,
+.mediaBox .reviewThumbnail a,
+.mediaBox .appThumbnail a {
+  height: 75px;
+  width: 100px;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.mediaBox .photosBox .photoThumbnail img,
+.mediaBox .reviewThumbnail img,
+.mediaBox .appThumbnail img {
+  height: 75px;
+  margin: 0 auto;
+}
+.mediaBox .photoCommentBox .commentBox {
+  width: 290px;
+}
+.mediaBox ul.actionLinks {
+  margin: 6px 0 0 0;
+}
+.mediaBox ul.actionLinks li {
+  background: url(https://web.archive.org/web/20090322215116im_/http://images.friendster.com/images/sn_bluearrow.gif)
+    center left no-repeat;
+  display: inline;
+  padding: 0 10px 0 7px;
+}
+
+.pcomments {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+/*
+     FILE ARCHIVED ON 21:51:16 Mar 22, 2009 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:14:14 May 07, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.683
+  exclusion.robots: 0.078
+  exclusion.robots.policy: 0.064
+  cdx.remote: 0.066
+  esindex: 0.012
+  LoadShardBlock: 125.356 (3)
+  PetaboxLoader3.datanode: 95.011 (4)
+  PetaboxLoader3.resolve: 67.728 (2)
+  load_resource: 72.016
+*/

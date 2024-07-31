@@ -40,17 +40,3 @@ npm run build
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-## lint
-
-This will check any errors or warnings in your codes, and will automatically fix by running:
-
-```bash
-npm run lint:fix
-```
-
-For more information, check [ESLint documentation](https://eslint.org/)
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/)

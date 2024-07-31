@@ -1,27 +1,24 @@
-import {
-  Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from 'react-router-dom';
-import MainLayouts from './layouts/MainLayouts';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SettingsPage from './pages/SettingsPage';
 import ProfilePage from './pages/ProfilePage';
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<MainLayouts />}>
-      <Route index element={<LoginPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/settings" element={<SettingsPage />} />
-      <Route path="/profile" element={<ProfilePage />} />
-    </Route>
-  )
-);
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import NotFound from './pages/NotFound';
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

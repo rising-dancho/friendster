@@ -40,3 +40,6 @@ npm run build
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## Progress
+https://app.clickup.com/9016359733/v/li/901603598519
